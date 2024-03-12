@@ -1,0 +1,279 @@
+body {
+    background-color: hsla(240, 100%, 97%, 0.5);
+}
+
+.intro {
+    background-color: hsla(240, 100%, 95%, 0.5);
+}
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-list {
+    border: 1px solid #000000;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #004785;
+    font-weight: bold;
+    /* border-bottom: 1px solid #ADD8E6; */
+    background-color: #FFF0F5;
+    font-size: 1.1em;
+    /* padding-bottom: 1px; */
+}
+
+nav a:hover {
+    color: #3C763D;
+    font-weight: normal;
+    /* border-bottom: 0.5px dashed #90EE90; */
+    background-color: transparent;
+    font-size: 1.05em;
+    /* padding-bottom: 0.5px; */
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #0294A5;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+ul {
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+
+    font-size: 20px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    padding: 5px;
+    justify-content: center;
+
+    /* width: 100% !important;
+    height: auto !important; */
+}
+
+.photo-gallery_ani, .photo-gallery_recp {
+    gap: 40px;
+    padding: 20px;
+}
+
+.photo-gallery video, .photo-gallery img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+.cute-text {
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #A52A2A;
+    text-shadow: 1px 1px 2px #E0FFFF;
+}
+
+figcaption {
+    color: #777;
+    font-size: 1em;
+    text-align: center;
+}
+
+.figcaption {
+    color: #777;
+    font-size: 1em;
+    text-align: center;
+}
+
+.mainpic {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.video-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.animal-list {
+    text-align: left;
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.intro-photo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid gold;
+}
+
+.food-intro {
+    text-align: center;
+    font-weight: 600;
+}
+
+.row:nth-child(odd) {
+    background-color: #fff;
+}
+  
+.row:nth-child(even) {
+    background-color: #FFCCCC;
+}
+
+.main-content {
+    display: flex;
+}
+  
+.main-content > div:first-child {
+    flex: 2;
+}
+  
+.main-content > div:last-child {
+    flex: 3;
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    img[src*=".gif"] {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+    #img1 {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+      }
+
+    #img2 {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    #img3 {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+
+    #img4 {
+        grid-column: 2 / span 2;
+        grid-row: 3;
+    }
+
+    .photo-gallery_special {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 0px;
+        padding: 0px;
+    }
+
+    figcaption {
+        font-size: 0.8em;
+    }
+
+    .figcaption {
+        font-size: 0.8em;
+    }
+
+    .skip-link {
+        top: 5px;
+        left: auto;
+        right: 0;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        top: 40%;
+        left: 5%;
+        transform: translate(-50%, -50%); /* Centers the nav list */
+        position: fixed;
+        width: 150px;
+        height: 100px;
+        background: #f0f0f0;
+        border: 2px solid #0294A5
+        /* overflow-y: auto; */
+    }
+
+    main {
+        margin-left: 200px;
+    }
+
+    .mainpic {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .video-gallery {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 480px) {
+	nav li {
+		margin-right: 20px;
+		margin: 10px;
+	}
+
+    .nav-list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    p {
+        font-size: 20px;
+    }
+
+    figcaption {
+        font-size: 1.2em;
+    }
+
+    .figcaption {
+        font-size: 1.2em;
+    }
+}
